@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:photo_editingapp/splase.dart';
+import 'package:photo_editingapp/splash.dart';
 
 void main() {
   runApp(const MyApp());
