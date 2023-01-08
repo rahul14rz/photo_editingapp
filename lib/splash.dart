@@ -44,7 +44,7 @@ class SplashScreenState extends State<SplashScreen> {
               height: 15,
             ),
             Text(
-              'Photo Editer',
+              'Photo Editor',
               style: TextStyle(color: MyColors.red, fontWeight: FontWeight.w500),
             ),
           ],
