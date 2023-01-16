@@ -26,7 +26,7 @@ class IntroScreenState extends State<IntroScreen> {
             const Spacer(),
             CustomContainer(
               function: () {
-                nextscreenPush(context, const PickImage());
+                CustomNavigation.nextscreenPush(context, const PickImage(),);
               },
               text: 'Edit Photo',
               icon: const Icon(

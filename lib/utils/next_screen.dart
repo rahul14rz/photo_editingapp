@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
-nextscreenPush(BuildContext context, page) {
-  Navigator.push(
+class CustomNavigation {
+  static Future<dynamic> nextscreenPush(BuildContext context, Widget page) {
+    return Navigator.push(
       context,
       MaterialPageRoute(
-        builder: ((context) => page),
-      ),);
+        builder: (context) => page,
+      ),
+    );
+  }
 }

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'utils/colors.dart';
 
 import 'screen/main_screen/screen/intro_screen.dart';
+import 'utils/screen_size.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -34,6 +35,8 @@ class SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    ScreenSize.init(context);
+
     return Scaffold(
       body: Center(
         child: Column(

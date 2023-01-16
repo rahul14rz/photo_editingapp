@@ -26,10 +26,11 @@ class _EditPhotoState extends State<EditPhoto> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-              height: MediaQuery.of(context).size.height * 0.75,
-              width: MediaQuery.of(context).size.width,
-              color: MyColors.bgcolor,
-              child: Image.file(widget.image),),
+            height: ScreenSize.height * 0.75,
+            width: ScreenSize.width,
+            color: MyColors.bgcolor,
+            child: Image.file(widget.image),
+          ),
           // const SizedBox(height: 15,),
           const Spacer(),
           SingleChildScrollView(
@@ -44,7 +45,12 @@ class _EditPhotoState extends State<EditPhoto> {
                     size: IconSize.mediam,
                   ),
                   onPressed: () {
-                    nextscreenPush(context, EditingImage(image: widget.image,));
+                    CustomNavigation.nextscreenPush(
+                      context,
+                      EditingImage(
+                        image: widget.image,
+                      ),
+                    );
                   },
                 ),
                 IconButton(
@@ -53,11 +59,12 @@ class _EditPhotoState extends State<EditPhoto> {
                     size: IconSize.mediam,
                   ),
                   onPressed: () {
-                    nextscreenPush(
-                        context,
-                        EditingImage(
-                          image: widget.image,
-                        ),);
+                    CustomNavigation.nextscreenPush(
+                      context,
+                      EditingImage(
+                        image: widget.image,
+                      ),
+                    );
                   },
                 ),
                 IconButton(
@@ -66,11 +73,12 @@ class _EditPhotoState extends State<EditPhoto> {
                     size: IconSize.mediam,
                   ),
                   onPressed: () {
-                    nextscreenPush(
-                        context,
-                        EditingImage(
-                          image: widget.image,
-                        ),);
+                    CustomNavigation.nextscreenPush(
+                      context,
+                      EditingImage(
+                        image: widget.image,
+                      ),
+                    );
                   },
                 ),
                 IconButton(
@@ -79,11 +87,12 @@ class _EditPhotoState extends State<EditPhoto> {
                     size: IconSize.mediam,
                   ),
                   onPressed: () {
-                    nextscreenPush(
-                        context,
-                        EditingImage(
-                          image: widget.image,
-                        ),);
+                    CustomNavigation.nextscreenPush(
+                      context,
+                      EditingImage(
+                        image: widget.image,
+                      ),
+                    );
                   },
                 ),
                 IconButton(
@@ -92,11 +101,12 @@ class _EditPhotoState extends State<EditPhoto> {
                     size: IconSize.mediam,
                   ),
                   onPressed: () {
-                    nextscreenPush(
-                        context,
-                        EditingImage(
-                          image: widget.image,
-                        ),);
+                    CustomNavigation.nextscreenPush(
+                      context,
+                      EditingImage(
+                        image: widget.image,
+                      ),
+                    );
                   },
                 ),
                 IconButton(
@@ -105,11 +115,12 @@ class _EditPhotoState extends State<EditPhoto> {
                     size: IconSize.mediam,
                   ),
                   onPressed: () {
-                    nextscreenPush(
-                        context,
-                        EditingImage(
-                          image: widget.image,
-                        ),);
+                    CustomNavigation.nextscreenPush(
+                      context,
+                      EditingImage(
+                        image: widget.image,
+                      ),
+                    );
                   },
                 ),
                 IconButton(
@@ -118,11 +129,12 @@ class _EditPhotoState extends State<EditPhoto> {
                     size: IconSize.mediam,
                   ),
                   onPressed: () {
-                    nextscreenPush(
-                        context,
-                        EditingImage(
-                          image: widget.image,
-                        ),);
+                    CustomNavigation.nextscreenPush(
+                      context,
+                      EditingImage(
+                        image: widget.image,
+                      ),
+                    );
                   },
                 ),
                 IconButton(
@@ -131,11 +143,12 @@ class _EditPhotoState extends State<EditPhoto> {
                     size: IconSize.mediam,
                   ),
                   onPressed: () {
-                    nextscreenPush(
-                        context,
-                        EditingImage(
-                          image: widget.image,
-                        ),);
+                    CustomNavigation.nextscreenPush(
+                      context,
+                      EditingImage(
+                        image: widget.image,
+                      ),
+                    );
                   },
                 ),
                 IconButton(
@@ -144,11 +157,12 @@ class _EditPhotoState extends State<EditPhoto> {
                     size: IconSize.mediam,
                   ),
                   onPressed: () {
-                    nextscreenPush(
-                        context,
-                        EditingImage(
-                          image: widget.image,
-                        ),);
+                    CustomNavigation.nextscreenPush(
+                      context,
+                      EditingImage(
+                        image: widget.image,
+                      ),
+                    );
                   },
                 ),
               ],

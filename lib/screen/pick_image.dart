@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:image_editor_plus/image_editor_plus.dart';
 import 'package:image_picker/image_picker.dart';
 import '../utils/custom_snackbar.dart';
 import 'details_screen/edit_photo.dart';
@@ -59,14 +60,14 @@ class _PickImageState extends State<PickImage> {
               function: () async {
                 final file = await getImage(source: ImageSource.gallery);
                 if (file != null && mounted) {
-                  nextscreenPush(
+                  CustomNavigation.nextscreenPush(
                     context,
-                    EditPhoto(
-                      image: file,
+                    ImageEditor(
+                      image: file.readAsBytesSync(),
                     ),
                   );
                 } else {
-                  showSnackBar('Unable to pick/choose an image', context);
+                  showSnackBar('Please choose an image', context);
                 }
               },
             ),
@@ -79,14 +80,14 @@ class _PickImageState extends State<PickImage> {
               function: () async {
                 final file = await getImage(source: ImageSource.camera);
                 if (file != null && mounted) {
-                  nextscreenPush(
+                  CustomNavigation.nextscreenPush(
                     context,
                     EditPhoto(
                       image: file,
                     ),
                   );
                 } else {
-                  showSnackBar('Unable to pick/choose an image', context);
+                  showSnackBar('Please choose an image', context);
                 }
               },
             ),

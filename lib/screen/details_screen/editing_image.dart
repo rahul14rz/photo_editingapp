@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../../utils/app_styles.dart';
 
 import '../../utils/colors.dart';
+import '../../utils/screen_size.dart';
 
 class EditingImage extends StatefulWidget {
   final File image;
@@ -19,20 +20,25 @@ class EditingImageState extends State<EditingImage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: MyColors.primaryColor,
-      actions: const [Padding(
-        padding: EdgeInsets.fromLTRB(10,20,10,0),
-        child: Text('Save',style: TextStyle(fontSize: MyFontsize.buttontext),),
-      )],
-
+        actions: const [
+          Padding(
+            padding: EdgeInsets.fromLTRB(10, 20, 10, 0),
+            child: Text(
+              'Save',
+              style: TextStyle(fontSize: MyFontsize.buttontext),
+            ),
+          )
+        ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-              height: MediaQuery.of(context).size.height * 0.75,
-              width: MediaQuery.of(context).size.width,
-              color: MyColors.secondaryColor.withOpacity(0.80),
-              child: Image.file(widget.image),),
+            height: ScreenSize.height * 0.75,
+            width: ScreenSize.width,
+            color: MyColors.secondaryColor.withOpacity(0.80),
+            child: Image.file(widget.image),
+          ),
           // const SizedBox(height: 15,),
           const Spacer(),
         ],
