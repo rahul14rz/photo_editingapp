@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:photo_editingapp/utils/colors.dart';
+import 'utils/colors.dart';
 
 import 'screen/main_screen/screen/intro_screen.dart';
 
@@ -23,7 +23,7 @@ class SplashScreenState extends State<SplashScreen> {
   startTimer() {
     //var duration = Duration(seconds: 5);
     return Timer(const Duration(seconds: 5),()=>
-        Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => const IntroScreen()),)
+        Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => const IntroScreen()),),
       
     );
   }

@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:photo_editingapp/utils/colors.dart';
-import 'package:photo_editingapp/utils/next_screen.dart';
+import '../../utils/colors.dart';
+import '../../utils/next_screen.dart';
 
 import '../../utils/screen_size.dart';
 import 'editing_image.dart';
@@ -29,7 +29,7 @@ class _EditPhotoState extends State<EditPhoto> {
               height: MediaQuery.of(context).size.height * 0.75,
               width: MediaQuery.of(context).size.width,
               color: MyColors.bgcolor,
-              child: Image.file(widget.image)),
+              child: Image.file(widget.image),),
           // const SizedBox(height: 15,),
           const Spacer(),
           SingleChildScrollView(
@@ -57,7 +57,7 @@ class _EditPhotoState extends State<EditPhoto> {
                         context,
                         EditingImage(
                           image: widget.image,
-                        ));
+                        ),);
                   },
                 ),
                 IconButton(
@@ -70,7 +70,7 @@ class _EditPhotoState extends State<EditPhoto> {
                         context,
                         EditingImage(
                           image: widget.image,
-                        ));
+                        ),);
                   },
                 ),
                 IconButton(
@@ -83,7 +83,7 @@ class _EditPhotoState extends State<EditPhoto> {
                         context,
                         EditingImage(
                           image: widget.image,
-                        ));
+                        ),);
                   },
                 ),
                 IconButton(
@@ -96,7 +96,7 @@ class _EditPhotoState extends State<EditPhoto> {
                         context,
                         EditingImage(
                           image: widget.image,
-                        ));
+                        ),);
                   },
                 ),
                 IconButton(
@@ -109,7 +109,7 @@ class _EditPhotoState extends State<EditPhoto> {
                         context,
                         EditingImage(
                           image: widget.image,
-                        ));
+                        ),);
                   },
                 ),
                 IconButton(
@@ -122,7 +122,7 @@ class _EditPhotoState extends State<EditPhoto> {
                         context,
                         EditingImage(
                           image: widget.image,
-                        ));
+                        ),);
                   },
                 ),
                 IconButton(
@@ -135,7 +135,7 @@ class _EditPhotoState extends State<EditPhoto> {
                         context,
                         EditingImage(
                           image: widget.image,
-                        ));
+                        ),);
                   },
                 ),
                 IconButton(
@@ -148,7 +148,7 @@ class _EditPhotoState extends State<EditPhoto> {
                         context,
                         EditingImage(
                           image: widget.image,
-                        ));
+                        ),);
                   },
                 ),
               ],

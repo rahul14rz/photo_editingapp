@@ -5,5 +5,5 @@ nextscreenPush(BuildContext context, page) {
       context,
       MaterialPageRoute(
         builder: ((context) => page),
-      ));
+      ),);
 }

@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:photo_editingapp/utils/app_styles.dart';
+import '../../utils/app_styles.dart';
 
 import '../../utils/colors.dart';
 
@@ -32,7 +32,7 @@ class EditingImageState extends State<EditingImage> {
               height: MediaQuery.of(context).size.height * 0.75,
               width: MediaQuery.of(context).size.width,
               color: MyColors.secondaryColor.withOpacity(0.80),
-              child: Image.file(widget.image)),
+              child: Image.file(widget.image),),
           // const SizedBox(height: 15,),
           const Spacer(),
         ],

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:photo_editingapp/utils/app_styles.dart';
+import '../../../utils/app_styles.dart';
 
 import '../../../utils/colors.dart';
 
@@ -39,7 +39,7 @@ class CustomContainerState extends State<CustomContainer> {
               colors: [widget.fromColor, widget.toColor],
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
-              stops: const [0.30, 1]),
+              stops: const [0.30, 1],),
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,

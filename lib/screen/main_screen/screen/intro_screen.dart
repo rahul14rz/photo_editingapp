@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:photo_editingapp/utils/colors.dart';
-import 'package:photo_editingapp/utils/next_screen.dart';
+import '../../../utils/colors.dart';
+import '../../../utils/next_screen.dart';
 import '../../../utils/app_styles.dart';
 import '../../pick_image.dart';
 import '../widget/container.dart';

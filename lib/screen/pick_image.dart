@@ -3,9 +3,9 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:photo_editingapp/screen/details_screen/edit_photo.dart';
-import 'package:photo_editingapp/screen/main_screen/widget/container.dart';
-import 'package:photo_editingapp/utils/next_screen.dart';
+import 'details_screen/edit_photo.dart';
+import 'main_screen/widget/container.dart';
+import '../utils/next_screen.dart';
 
 import '../utils/app_styles.dart';
 
@@ -58,7 +58,7 @@ class _PickImageState extends State<PickImage> {
                   if (imageFile != null) {
                     nextscreenPush(context,  EditPhoto(image: imageFile!,));
                   }
-                }),
+                },),
             const SizedBox(
               height: 15,
             ),
@@ -68,7 +68,7 @@ class _PickImageState extends State<PickImage> {
                 function: () {
                   getImage(source: ImageSource.camera);
                   nextscreenPush(context,  EditPhoto(image: imageFile!));
-                }),
+                },),
             const Spacer(),
           ],
         ),
