@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Editing App',
+      title: 'Photo Editing App',
       theme: ThemeData.light(),
       home: const SplashScreen(),
     );
