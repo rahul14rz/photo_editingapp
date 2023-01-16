@@ -19,14 +19,19 @@ class SplashScreenState extends State<SplashScreen> {
     startTimer();
   }
 
-
   startTimer() {
     //var duration = Duration(seconds: 5);
-    return Timer(const Duration(seconds: 5),()=>
-        Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => const IntroScreen()),),
-      
+    return Timer(
+      const Duration(seconds: 5),
+      () => Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const IntroScreen(),
+        ),
+      ),
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,13 +39,13 @@ class SplashScreenState extends State<SplashScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
-          children:  [
+          children: [
             Icon(
               Icons.edit_note_rounded,
               color: MyColors.red,
               size: 50,
             ),
-           const SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Text(

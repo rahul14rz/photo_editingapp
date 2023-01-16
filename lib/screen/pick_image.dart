@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import '../utils/custom_snackbar.dart';
 import 'details_screen/edit_photo.dart';
 import 'main_screen/widget/container.dart';
 import '../utils/next_screen.dart';
@@ -18,13 +19,15 @@ class PickImage extends StatefulWidget {
 
 class _PickImageState extends State<PickImage> {
   File? imageFile;
-  void getImage({required ImageSource source}) async {
-    final file = await ImagePicker().pickImage(source: source, imageQuality: 70);
-
-    if (file?.path != null) {
-      setState(() {
-        imageFile = File(file!.path);
-      });
+  Future<File?> getImage({required ImageSource source}) async {
+    final file = await ImagePicker().pickImage(
+      source: source,
+      imageQuality: null,
+    );
+    if (file != null) {
+      return File(file.path);
+    } else {
+      return null;
     }
   }
 
@@ -51,24 +54,42 @@ class _PickImageState extends State<PickImage> {
           children: [
             const Spacer(),
             CustomContainer(
-                text: 'From Gallery',
-                icon: const Icon(Icons.photo_library),
-                function: () {
-                  pickFile();
-                  if (imageFile != null) {
-                    nextscreenPush(context,  EditPhoto(image: imageFile!,));
-                  }
-                },),
+              text: 'From Gallery',
+              icon: const Icon(Icons.photo_library),
+              function: () async {
+                final file = await getImage(source: ImageSource.gallery);
+                if (file != null && mounted) {
+                  nextscreenPush(
+                    context,
+                    EditPhoto(
+                      image: file,
+                    ),
+                  );
+                } else {
+                  showSnackBar('Unable to pick/choose an image', context);
+                }
+              },
+            ),
             const SizedBox(
               height: 15,
             ),
             CustomContainer(
-                text: 'From Camera',
-                icon: const Icon(Icons.camera),
-                function: () {
-                  getImage(source: ImageSource.camera);
-                  nextscreenPush(context,  EditPhoto(image: imageFile!));
-                },),
+              text: 'From Camera',
+              icon: const Icon(Icons.camera),
+              function: () async {
+                final file = await getImage(source: ImageSource.camera);
+                if (file != null && mounted) {
+                  nextscreenPush(
+                    context,
+                    EditPhoto(
+                      image: file,
+                    ),
+                  );
+                } else {
+                  showSnackBar('Unable to pick/choose an image', context);
+                }
+              },
+            ),
             const Spacer(),
           ],
         ),
